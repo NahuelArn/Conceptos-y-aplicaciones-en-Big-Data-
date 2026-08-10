@@ -1,0 +1,19 @@
+Consulta 1:
+El jugador más “retador”: Jugador 1
+El jugador más “retado”: Jugador 43
+-----------------------------------------------------------------------------
+
+Consulta 2:
+El jugador con más puntos en promedio: Jugador 53
+-----------------------------------------------------------------------------
+
+Consulta 3:
+Con H = 12
+Jugadores que “retaron” a más de H oponentes distintos: Jugadores 1 (con 15 retos a jugadores distintos), 48 (con 12), 55 (con 12) y  65 (con 13)
+-----------------------------------------------------------------------------
+
+Consulta 4:
+Con alfa = 0.1; puntaje heroico inicial = 1; cota de error = 0.1 (20 iteraciones)
+El top 10 de los jugadores con mejor puntaje heroico:
+(Jugador = 48, Puntaje heroico = 1092.6), (72, 524.7), (89, 424.2), (57, 394.1), (1, 391.5), (43, 380.7), (50, 314.1), (41, 310.4), (39, 290.0), (60, 268.6)]
+-----------------------------------------------------------------------------
