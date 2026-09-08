@@ -1,0 +1,5 @@
+Sin embargo, observamos que el formato no siempre se respeta: existen muchas variantes con errores tipográficos como "muy satisfecho", "muys atisfecho" o "disconfrome", que dificultan el conteo correcto.
+
+Por ello, para obtener resultados confiables, es necesario aplicar una etapa de normalización previa o durante el map, que agrupe variantes similares en alguna de las cinco categorías válidas: "Muy satisfecho", "Algo satisfecho", "Poco satisfecho", "Disconforme" y "Muy disconforme".
+
+Esto puede lograrse usando comparaciones por similitud (por ejemplo, con difflib.get_close_matches en Python), o validaciones exactas contra una lista predefinida de opciones válidas. Una vez agrupadas correctamente, el reduce podrá contabilizar cuántos clientes están en cada categoría con mayor precisión.

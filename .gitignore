@@ -1,0 +1,62 @@
+# ==========================================
+# Python
+# ==========================================
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+
+# Caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de distribución
+build/
+dist/
+*.egg-info/
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# ==========================================
+# VS Code
+# ==========================================
+
+.vscode/
+*.code-workspace
+
+# ==========================================
+# Jupyter Notebook
+# ==========================================
+
+.ipynb_checkpoints/
+
+# ==========================================
+# Sistema operativo
+# ==========================================
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux
+*~
+.directory
+
+# macOS
+.DS_Store
+
+# ==========================================
+# Archivos temporales
+# ==========================================
+
+*.tmp
+*.temp
+*.log

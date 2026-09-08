@@ -1,0 +1,34 @@
+
+5) Indique si utilizando el dataset Libros es posible resolver los siguientes problemas: 
+a. Obtener los títulos de todos los libros 
+"Dentro  de  cada  archivo,  la  primera  línea  tiene  el  título  del  libro  y  luego  en 
+las  líneas  siguientes  un  párrafo  por  línea"
+En teoria no, ya que al tener N libros el offset no vuelve a 0 al 
+estar en el proximo libro... solo podemos obtener el nombre
+del primer libro. O tendriamos que adivinar direcciones para el titulo 1+libroN
+
+b. Obtener  la cantidad de palabras promedio por párrafo 
+Si, pero tendriamos que omitir los titulos... de alguna forma.
+Despues seria agarrar el .len de una linea para sacar la cantidad de palabras
+de esa linea
+entonces el map pasa 1 = key, y value cantidad de palabras
+ahora el reduce va recibir .cantidad de parrafos que es la cantidad de values...cantidad de palabras=la suma de la cantidad de palabras
+cada value que recibe, representa un parrafo... como siempre le mando 1, se va hacer sobre 1 solo reduce...
+ahora ese reduce x cada value recibido sabemos que fue un parrafo... y ahora le quede llevar
+2 contadores 
+1 para contar los values...
+1 para contar la cantidad de palabras total..las va sumando
+c. Obtener  la cantidad de párrafos promedio por libro 
+No
+d. Obtener  la cantidad de caracteres del párrafo más extenso
+ Se puede obtener la cantidad de caracteres de cada párrafo (ordenado de menor a mayor ya que el valor es único por dato/linea), el máximo estará al final de alguna salida.
+e. Cantidad  total  de  párrafos  con  diálogos  (se  entiende  por  párrafo  con  diálogo 
+aquel que empieza con un guión) 
+Si es posible, en la funcion map se verifica si el primer caracter es un "-" (.startswith()), en ese caso se escribe <"dialogo", 1>
+la funcion reduce hace un conteo de la cantidad de "dialogo"
+siguen un mismo "prefijo" y se pueden contabilizar todos bajo una única clave, de modo de obtener un solo resultado
+f. El diálogo más largo (se entiende por diálogo a una secuencia de párrafos con 
+diálogo que aparecen de manera consecutiva) 
+No, porque no se conoce información del dato anterior.
+g. El top 20 de las palabras más usadas por cada libro
+No, desconozco el archivo origen |datos aislados|

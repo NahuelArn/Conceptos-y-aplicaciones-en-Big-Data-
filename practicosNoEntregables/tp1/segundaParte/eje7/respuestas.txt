@@ -1,0 +1,19 @@
+
+a. El nombre del inversionista más joven 
+b. El total del importe invertido por todos los inversionistas 
+c. El promedio de edad
+d. Implemente una solución en MapReduce. ¿Se puede resolver los tres problemas en un 
+único job
+
+a- Inversionista más joven	Zuhccg
+b- Total monto invertido	44464100334.0
+c- Promedio de edad	45.65233539673607
+d- Si, 
+  inversionista mas joven	Wqdpcz	31131203
+  total_invertido	44464100334
+  promedio de edades	45.65233539673607
+
+  aca varia la en el nombre del inversionasta mas joven ya que solo se toma en cuenta el anho y
+  en el anterior codigo, toma en cuenta tambien mes y dia
+
+

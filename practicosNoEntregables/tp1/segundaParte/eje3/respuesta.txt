@@ -1,0 +1,24 @@
+Este punto es conceptual... 
+a priori con un solo reduce no se podria
+necesitaria por lo menos 2 reduces o utilizar un combiner...
+
+
+Esta solucion implementada, se hace en 2 pasadas...
+el output va ser el input del input2
+
+"
+Se realizaría un segundo MapReduce sobre la salida de WordCount. 
+El map recibiría (palabra, cantidad) e invertiría la clave y 
+el valor, generando (cantidad, palabra). Luego se ordenarían las 
+cantidades de forma descendente y el reduce conservaría solamente
+ las 20 palabras con mayor frecuencia.
+"
+
+"
+Como reduce no tiene acceso al orden de aparición ni a líneas 
+específicas, y una palabra puede aparecer en distintas líneas, 
+no es posible agrupar las ocurrencias por línea. Por eso, las 
+apariciones totales se muestran desordenadas y requieren 
+procesamiento adicional externo (por ejemplo, en Excel) 
+si se desea un orden o agrupación específica.
+"

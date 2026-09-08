@@ -1,0 +1,4 @@
+consonantes	36722
+numeros	6
+otros	19467
+vocales	29528
