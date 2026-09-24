@@ -1,0 +1,5 @@
+total_palabras:	5253
+total_ocurrencias_x_palabra:	14483
+max: 	de	 con 	833
+min: 	!ah!	 con 	1
+prom:	2.757091185988959

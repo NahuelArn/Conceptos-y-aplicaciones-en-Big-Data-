@@ -1,0 +1,64 @@
+DAG significa Directed Acyclic Graph, o grafo dirigido acíclico. En este ejercicio representa el flujo de datos entre los Jobs MapReduce y sus dependencias.
+
+No te pide graficar cada Mapper, Combiner y Reducer individualmente, sino mostrar cómo se conectan las tres consultas.
+
+El flujo puede representarse así:
+
+imagen.png (mismaCarpeta)
+
+Conceptualmente, los tres caminos salen del mismo dataset:
+
+Dataset
+   ├── Consulta A
+   ├── Consulta B
+   └── Consulta C
+   
+No necesariamente tenés que ejecutar A antes que B o C. Son consultas independientes y pueden ejecutarse en paralelo porque todas leen el mismo dataset original.
+
+Para la consulta A, como una página puede aparecer varias veces para el mismo usuario, el flujo correcto es:
+
+(id_user, id_page, time)
+        |
+        v
+Agrupar por (id_user, id_page)
+        |
+        v
+Sumar time
+        |
+        v
+Agrupar por id_user
+        |
+        v
+Elegir la página con mayor tiempo acumulado
+
+Para la consulta B:
+
+(id_user, id_page, time)
+        |
+        v
+Agrupar por id_user
+        |
+        v
+Eliminar páginas repetidas
+        |
+        v
+Contar páginas distintas
+        |
+        v
+Elegir el usuario con mayor cantidad
+
+Para la consulta C:
+
+(id_user, id_page, time)
+        |
+        v
+Agrupar por id_page
+        |
+        v
+Contar cantidad de visitas
+        |
+        v
+Elegir la página con mayor cantidad
+
+Los Combiners se dibujan como optimizaciones locales entre el Mapper y el Reducer, pero no cambian la estructura lógica principal del DAG.
+

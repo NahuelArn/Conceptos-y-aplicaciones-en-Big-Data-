@@ -1,0 +1,10 @@
+En MapReduce, el Combiner sirve para hacer una agregación local en cada nodo después del Mapper y antes del Reducer.
+
+Su principal beneficio es reducir la cantidad de datos que deben viajar por la red durante el shuffle, mejorando el rendimiento y reduciendo la carga de los Reducers.
+
+Ejemplo en WordCount:
+
+
+En lugar de enviar tres pares (hola, 1), envía uno solo (hola, 3).
+
+Importante: Hadoop puede ejecutar el Combiner cero, una o varias veces. Por eso debe ser una operación asociativa y conmutativa, como una suma, y el programa debe funcionar correctamente aunque no se ejecute.
